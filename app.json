@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tasks-todo-reactnative",
-    "slug": "tasks-todo-reactnative",
+    "name": "tasks-todo",
+    "slug": "tasks-todo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
