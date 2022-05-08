@@ -14,7 +14,9 @@ export default function App() {
 
   function AddTask(){
     //alert("You addded " + taskInput)
-    setTask([...tasks, { name: taskInput } ])
+    if(taskInput != ""){
+      setTask([...tasks, { name: taskInput } ])
+    }
     console.log(tasks)
   }
 
@@ -46,14 +48,14 @@ export default function App() {
         return(
           <View key={index} style={styles.taskCont}>
             <Text style={styles.taskTxt}>{item.name}</Text>
-            <TouchableOpacity
+            {/* <TouchableOpacity
             style={styles.removeBtn}
             onPress={() => RemoveTask(index)}
             underlayColor='#fff'
-            >
-              <Text style={styles.btnText}>Remove</Text>
-            {/* <Text style={styles.btnText}><Icon.Button name="remove" backgroundColor="transparent"></Icon.Button> Remove</Text> */}
-            </TouchableOpacity>
+            > */}
+              {/* <Text style={styles.btnText}>Remove</Text> */}
+            <Icon.Button name="remove" backgroundColor="transparent" onPress={() => RemoveTask(index)}></Icon.Button>
+            {/* </TouchableOpacity> */}
             </View>
         )
         })}
